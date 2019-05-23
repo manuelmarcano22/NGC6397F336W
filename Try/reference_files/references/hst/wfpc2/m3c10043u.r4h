@@ -1,0 +1,850 @@
+SIMPLE  =                    F /                                                
+BITPIX  =                   32 /                                                
+DATATYPE= 'REAL*4  '           /                                                
+NAXIS   =                    2 /                                                
+NAXIS1  =                  800 /                                                
+NAXIS2  =                  800 /                                                
+GROUPS  =                    T /                                                
+GCOUNT  =                    4 /                                                
+PCOUNT  =                   38 /                                                
+PSIZE   =                 1760 /                                                
+PTYPE1  = 'CRVAL1  '           /right ascension of reference pixel              
+PDTYPE1 = 'REAL*8  '           /                                                
+PSIZE1  =                   64 /                                                
+PTYPE2  = 'CRVAL2  '           /declination of reference pixel                  
+PDTYPE2 = 'REAL*8  '           /                                                
+PSIZE2  =                   64 /                                                
+PTYPE3  = 'CRPIX1  '           /x-coordinate of reference pixel                 
+PDTYPE3 = 'REAL*4  '           /                                                
+PSIZE3  =                   32 /                                                
+PTYPE4  = 'CRPIX2  '           /y-coordinate of reference pixel                 
+PDTYPE4 = 'REAL*4  '           /                                                
+PSIZE4  =                   32 /                                                
+PTYPE5  = 'CD1_1   '           /partial of the right ascension w.r.t. x         
+PDTYPE5 = 'REAL*4  '           /                                                
+PSIZE5  =                   32 /                                                
+PTYPE6  = 'CD1_2   '           /partial of the right ascension w.r.t. y         
+PDTYPE6 = 'REAL*4  '           /                                                
+PSIZE6  =                   32 /                                                
+PTYPE7  = 'CD2_1   '           /partial of the declination w.r.t. x             
+PDTYPE7 = 'REAL*4  '           /                                                
+PSIZE7  =                   32 /                                                
+PTYPE8  = 'CD2_2   '           /partial of the declination w.r.t. y             
+PDTYPE8 = 'REAL*4  '           /                                                
+PSIZE8  =                   32 /                                                
+PTYPE9  = 'DATAMIN '           /minimum value of the data                       
+PDTYPE9 = 'REAL*4  '           /                                                
+PSIZE9  =                   32 /                                                
+PTYPE10 = 'DATAMAX '           /maximum value of the data                       
+PDTYPE10= 'REAL*4  '           /                                                
+PSIZE10 =                   32 /                                                
+PTYPE11 = 'MIR_REVR'           /is the image mirror reversed?                   
+PDTYPE11= 'LOGICAL*4'          /                                                
+PSIZE11 =                   32 /                                                
+PTYPE12 = 'ORIENTAT'           /orientation of the image in degrees             
+PDTYPE12= 'REAL*4  '           /                                                
+PSIZE12 =                   32 /                                                
+PTYPE13 = 'FILLCNT '           /number of segments containing fill              
+PDTYPE13= 'INTEGER*4'          /                                                
+PSIZE13 =                   32 /                                                
+PTYPE14 = 'ERRCNT  '           /number of segments containing errors            
+PDTYPE14= 'INTEGER*4'          /                                                
+PSIZE14 =                   32 /                                                
+PTYPE15 = 'FPKTTIME'           /time of the first packet                        
+PDTYPE15= 'REAL*8  '           /                                                
+PSIZE15 =                   64 /                                                
+PTYPE16 = 'LPKTTIME'           /time of the last packet                         
+PDTYPE16= 'REAL*8  '           /                                                
+PSIZE16 =                   64 /                                                
+PTYPE17 = 'CTYPE1  '           /first coordinate type                           
+PDTYPE17= 'CHARACTER*8'        /                                                
+PSIZE17 =                   64 /                                                
+PTYPE18 = 'CTYPE2  '           /second coordinate type                          
+PDTYPE18= 'CHARACTER*8'        /                                                
+PSIZE18 =                   64 /                                                
+PTYPE19 = 'DETECTOR'           /CCD detector: PC 1, WFC 2-4                     
+PDTYPE19= 'INTEGER*4'          /                                                
+PSIZE19 =                   32 /                                                
+PTYPE20 = 'DEZERO  '           /Mean bias level from EED extended register      
+PDTYPE20= 'REAL*4  '           /                                                
+PSIZE20 =                   32 /                                                
+PTYPE21 = 'BIASEVEN'           /Bias level for even-numbered columns            
+PDTYPE21= 'REAL*4  '           /                                                
+PSIZE21 =                   32 /                                                
+PTYPE22 = 'BIASODD '           /Bias level for odd-numbered columns             
+PDTYPE22= 'REAL*4  '           /                                                
+PSIZE22 =                   32 /                                                
+PTYPE23 = 'GOODMIN '           /minumum value of the "good" pixels              
+PDTYPE23= 'REAL*4  '           /                                                
+PSIZE23 =                   32 /                                                
+PTYPE24 = 'GOODMAX '           /maximum value of the "good" pixels              
+PDTYPE24= 'REAL*4  '           /                                                
+PSIZE24 =                   32 /                                                
+PTYPE25 = 'DATAMEAN'           /mean value of the "good" pixels                 
+PDTYPE25= 'REAL*4  '           /                                                
+PSIZE25 =                   32 /                                                
+PTYPE26 = 'GPIXELS '           /number of "good" pixels               (DQF=0)   
+PDTYPE26= 'INTEGER*4'          /                                                
+PSIZE26 =                   32 /                                                
+PTYPE27 = 'SOFTERRS'           /number of "soft error" pixels         (DQF=1)   
+PDTYPE27= 'INTEGER*4'          /                                                
+PSIZE27 =                   32 /                                                
+PTYPE28 = 'CALIBDEF'           /number of "calibration defect" pixels (DQF=2)   
+PDTYPE28= 'INTEGER*4'          /                                                
+PSIZE28 =                   32 /                                                
+PTYPE29 = 'STATICD '           /number of "static defect" pixels      (DQF=4)   
+PDTYPE29= 'INTEGER*4'          /                                                
+PSIZE29 =                   32 /                                                
+PTYPE30 = 'ATODSAT '           /number of "AtoD saturated" pixels     (DQF=8)   
+PDTYPE30= 'INTEGER*4'          /                                                
+PSIZE30 =                   32 /                                                
+PTYPE31 = 'DATALOST'           /number of "data lost" pixels          (DQF=16)  
+PDTYPE31= 'INTEGER*4'          /                                                
+PSIZE31 =                   32 /                                                
+PTYPE32 = 'BADPIXEL'           /number of "generic bad" pixels        (DQF=32)  
+PDTYPE32= 'INTEGER*4'          /                                                
+PSIZE32 =                   32 /                                                
+PTYPE33 = 'OVERLAP '           /number of "image overlap" pixels      (DQF=64)  
+PDTYPE33= 'INTEGER*4'          /                                                
+PSIZE33 =                   32 /                                                
+PTYPE34 = 'PHOTMODE'           /Photometry mode                                 
+PDTYPE34= 'CHARACTER*48'       /                                                
+PSIZE34 =                  384 /                                                
+PTYPE35 = 'PHOTFLAM'           /Inverse Sensitivity                             
+PDTYPE35= 'REAL*4  '           /                                                
+PSIZE35 =                   32 /                                                
+PTYPE36 = 'PHOTZPT '           /Zero point                                      
+PDTYPE36= 'REAL*4  '           /                                                
+PSIZE36 =                   32 /                                                
+PTYPE37 = 'PHOTPLAM'           /Pivot wavelength                                
+PDTYPE37= 'REAL*4  '           /                                                
+PSIZE37 =                   32 /                                                
+PTYPE38 = 'PHOTBW  '           /RMS bandwidth of the filter                     
+PDTYPE38= 'REAL*4  '           /                                                
+PSIZE38 =                   32 /                                                
+                               / GROUP PARAMETERS:                              
+                               / GROUP PARAMETERS: PODPS                        
+                               / GROUP PARAMETERS: DATA QUALITY FILE SUMMARY    
+                               / GROUP PARAMETERS: PHOTOMETRY                   
+                               / WFPC2 DATADS                                   
+                                                                                
+INSTRUME= 'WFPC2   '           / instrument in use                              
+ROOTNAME= 'M3C10043U'          / rootname of the observation set                
+FILETYPE= 'FLT     '           / shp, ext, edq, sdq, sci                        
+                                                                                
+                               / SCIENCE INSTRUMENT CONFIGURATION               
+                                                                                
+MODE    = 'FULL    '           / instr. mode: FULL (full res.), AREA (area int.)
+SERIALS = 'OFF     '           / serial clocks: ON, OFF                         
+                                                                                
+                               / IMAGE TYPE                                     
+                                                                                
+IMAGETYP= 'CDBS    '           / DARK/BIAS/IFLAT/UFLAT/VFLAT/KSPOT/EXT/ECAL     
+CDBSFILE= 'FLAT    '           / GENERIC/BIAS/DARK/FLAT/MASK/NO                 
+PKTFMT  = '        '           / packet format code                             
+DATE    = '12/03/2002'         / date file written (dd/mm/yy)                   
+                                                                                
+                               / FILTER         CONFIGURATION                   
+                                                                                
+FILTNAM1= 'F336W   '           / first filter name                              
+FILTNAM2= '        '           / second filter name                             
+FILTER1 =                   11 / first filter number (0-48)                     
+FILTER2 =                    0 / second filter number (0-48)                    
+FILTROT =                   0. / "ramp" filter rotation angle (deg)             
+LRFWAVE =                   0. / linear ramp filter wavelength                  
+                               / INSTRUMENT STATUS USED IN DATA PROCESSING      
+                                                                                
+UCH1CJTM=                -1.00 / TEC cold junction #1 temperature (Celcius)     
+UCH2CJTM=                -1.00 / TEC cold junction #2 temperature (Celcius)     
+UCH3CJTM=                -1.00 / TEC cold junction #3 temperature (Celcius)     
+UCH4CJTM=                -1.00 / TEC cold junction #4 temperature (Celcius)     
+UBAY3TMP=                -1.00 / Bay 3 A1 temperature (Celcius)                 
+KSPOTS  = 'OFF     '           / Status of Kelsall spot lamps: ON, OFF          
+SHUTTER = '        '           / Shutter in place during preflash or IFLAT (A,B)
+ATODGAIN=                   0. /                                                
+                                                                                
+                               / RSDP CONTROL KEYWORDS                          
+                                                                                
+MASKCORR= '        '           / Do mask correction: PERFORM, OMIT, COMPLETED   
+ATODCORR= '        '           / Do A-to-D correction: PERFORM, OMIT, COMPLETED 
+BLEVCORR= '        '           / Do bias level correction: PERFORM, OMIT, COMPLE
+BIASCORR= '        '           / Do bias correction: PERFORM, OMIT, COMPLETED   
+DARKCORR= '        '           / Do dark correction: PERFORM, OMIT, COMPLETED   
+FLATCORR= '        '           / Do flat field correction: PERFORM, OMIT, COMPLE
+SHADCORR= '        '           / Do shaded shutter correction: PERFORM, OMIT, CO
+DOSATMAP= '        '           / Output saturated pixel map: PERFORM, OMIT, COMP
+DOPHOTOM= '        '           / Fill photometry keywords: PERFORM, OMIT, COMPLE
+OUTDTYPE= 'SHORT   '           / Output image datatype: REAL, LONG, SHORT       
+                                                                                
+                               / CALIBRATION REFERENCE FILES                    
+                                                                                
+MASKFILE= '        '           / name of the input DQF of known bad pixels      
+ATODFILE= '        '           / name of A-to-D conversion file                 
+BLEVFILE= '        '           / Engineering file with extended register data   
+BLEVDFIL= '        '           / Engineering file DQF                           
+BIASFILE= '        '           / name of the bias frame reference file          
+BIASDFIL= '        '           / name of the bias frame reference DQF           
+DARKFILE= '        '           / name of the dark reference file                
+DARKDFIL= '        '           / name of the dark reference DQF                 
+FLATFILE= '        '           / name of the flat field reference file          
+FLATDFIL= '        '           / name of the flat field reference DQF           
+SHADFILE= '        '           / name of the reference file for shutter shading 
+PHOTTAB = '        '           / name of the photometry calibration table       
+GRAPHTAB= '        '           / the HST graph table                            
+COMPTAB = '        '           / the HST components table                       
+                                                                                
+                               / DEFAULT KEYWORDS SET BY STSCI                  
+                                                                                
+SATURATE=                 4095 / Data value at which saturation occurs          
+USCALE  =                   1. / Scale factor for output image                  
+UZERO   =                   0. / Zero point for output image                    
+                                                                                
+                               / READOUT DURATION INFORMATION                   
+                                                                                
+READTIME=                    0 / Length of time for CCD readout in clock ticks  
+                                                                                
+                               / PLANETARY SCIENCE KEYWORDS                     
+                                                                                
+PA_V3   =                   0. / position angle of v3 axis of HST               
+RA_SUN  =                   0. / right ascension of the sun                     
+DEC_SUN =                   0. / declination of the sun                         
+EQNX_SUN=                2000. / epoch of the sun                               
+MTFLAG  =                    F / moving target flag                             
+EQRADTRG=                  0.0 / equatorial radius of target                    
+FLATNTRG=                  0.0 / flattening of target                           
+NPDECTRG=                  0.0 / north pole declination of target               
+NPRATRG =                   0. / north pole right ascension of target           
+ROTRTTRG=                  0.0 / rotation rate of target                        
+LONGPMER=                  0.0 / longitude of prime meridian                    
+EPLONGPM=                  0.0 / epoch of longitude of prime meridian           
+SURFLATD=                  0.0 / surface feature latitude                       
+SURFLONG=                  0.0 / surface feature longitude                      
+SURFALTD=                  0.0 / surface feature altitude                       
+                                                                                
+                               / PODPS FILL                                     
+                                                                                
+PODPSFF =                    0 / 0=(no podps fill), 1=(podps fill present)      
+STDCFFF =                    0 / 0=(no st dcf fill), 1=(st dcf fill present)    
+STDCFFP = '        '           / st dcf fill pattern (hex)                      
+RSDPFILL=                 -100 / bad data fill value for calibrated images      
+                                                                                
+                               / EXPOSURE TIME AND RELATED INFORMATION          
+                                                                                
+UEXPODUR=                    0 / Commanded duration of exposure (seconds)       
+NSHUTA17=                    0 / Number of AP17 shutter B closes                
+DARKTIME=                  0.0 / Dark time (seconds)                            
+UEXPOTIM=                    0 / Major frame pulse preceding exposure start     
+PSTRTIME= '        '           / Predicted observation start time  (yydddhhmmss)
+PSTPTIME= '        '           / Predicted observation stop  time  (yydddhhmmss)
+                                                                                
+                               / EXPOSURE INFORMATION                           
+                                                                                
+EQUINOX = ' J2000  '           / equinox of the celestial coordinate system     
+SUNANGLE=                   0. / angle between the sun and V1 axis (deg)        
+MOONANGL=                   0. / angle between the moon and V1 axis (deg)       
+SUN_ALT =                   0. / altitude of the sun above the Earth's limb(deg)
+FGSLOCK =               'FINE' / commanded FGS lock (FINE,COARSE,GYROS,UNKNOWN) 
+                                                                                
+                                                                                
+DATE-OBS= '1996-10-30'         / UT date of start of observation (dd/mm/yy)     
+TIME-OBS=           '00:00:00' / UT time of start of observation (hh:mm:ss)     
+EXPSTART=                   0. / exposure start time (Modified Julian Date)     
+EXPEND  =                   0. / exposure end time (Modified Julian Date)       
+EXPTIME =                   0. / exposure duration (seconds) -- calculated      
+EXPFLAG =                    0 / Exposure interruption indicator                
+                                                                                
+                               / TARGET                     &                   
+                                                                                
+TARGNAME= '        '           / proposer's target name                         
+RA_TARG =                   0. / right ascension of target                      
+DEC_TARG=                   0. / declination of target                          
+                                                                                
+PROPOSID= '        '           / PEP proposal identifier                        
+PEP_EXPO= '        '           / PEP exposure identifier including sequence     
+LINENUM =                    0 / PEP proposal line number                       
+SEQLINE =                    0 / PEP line number of defined sequence            
+SEQNAME =                    0 / PEP define/use sequence name                   
+PEDIGREE= 'INFLIGHT 30/10/1996 - 30/04/2001'                                    
+DESCRIP = 'Improved Cyc6-9 flat, rms errors < 0.2-0.3% - see ISR 2002-02'       
+USEAFTER= 'Oct 30 1996 00:00:00'                                                
+HISTORY                                                                         
+HISTORY   1994 FLATFIELD UPDATE (Biretta and Wiggs, STScI)                      
+HISTORY   ================================================                      
+HISTORY                                                                         
+HISTORY   This is an update to previous Investigation                           
+HISTORY   Definition Team (IDT) F336W flat, e451033su.r4h                       
+HISTORY                                                                         
+HISTORY   INTRODUCTION:                                                         
+HISTORY                                                                         
+HISTORY   This FLAT is an improved version of the Investigation                 
+HISTORY   Definition Team (IDT) flat for this filter, where a                   
+HISTORY   correction has been applied to spatial scales between                 
+HISTORY   ~7 pixels and 800 pixels.  The resulting flat is effectively          
+HISTORY   the preflight thermal-vaccuum flat for this filter,                   
+HISTORY   with an improved  on-orbit illumination pattern correction            
+HISTORY   applied to scales >7 pixels.  On the very largest scales,             
+HISTORY   the chip-to-chip normalization of the IDT flat has been               
+HISTORY   preserved.                                                            
+HISTORY                                                                         
+HISTORY   HOW THIS FLAT WAS CALCULATED:                                         
+HISTORY                                                                         
+HISTORY   The improved illumination pattern correction was derived              
+HISTORY   using F502N Earthflats, and the previous F502N reference              
+HISTORY   flat, e3809354u, as follows:                                          
+HISTORY                                                                         
+HISTORY   The following 21 F502N EARTHFLATs taken after 1 May 1994 were used    
+HISTORY   (i.e. post-cooldown).  These are all 1.2 sec. exposures taken on      
+HISTORY   shutter "A" in gain 15.  They have been calibrated using contemporary 
+HISTORY   dark files, and are corrected for shutter shading.  They were         
+HISTORY   selected to have count levels in the range 600 to 3000 DN.            
+HISTORY                                                                         
+HISTORY   Dataset        Date obs    Days since    Mean       Streaks           
+HISTORY                  DD/MM/YY    decon.       WFC DN      p-p amp           
+HISTORY   ---------      --------    ----------   ------      -------           
+HISTORY   Group A:                                                              
+HISTORY   u2a31504t       4/05/94       11         1262         0.7%            
+HISTORY   u2a31903t       2/05/94        9         1773         1.2%            
+HISTORY   u2a31k04t      27/05/94        4         1429         1.1%            
+HISTORY   u2a31s04t       3/06/94       11         2022         1.4%            
+HISTORY   u2a31z03t      17/06/94        4         1218         1.4%            
+HISTORY   u2a32004t      19/06/94        6          913         1.4%            
+HISTORY   u2a32404t      25/06/94       12          692         1.2%            
+HISTORY   u2a32703t      22/06/94        9         1545         0.1%            
+HISTORY   u2a32k03t      27/09/94        2         2145         0.3%            
+HISTORY   u2a32o03t      21/07/94       11         2329         0.6%            
+HISTORY                                                                         
+HISTORY   Group B:                                                              
+HISTORY   u2a30s03t       2/10/94        7         1867         1.1%            
+HISTORY   u2a31304t       2/08/94        5         1980         1.4%            
+HISTORY   u2a31a04p       9/05/94       16         1475         0.5%            
+HISTORY   u2a31s03t       3/06/94       11         1127         0.7%            
+HISTORY   u2a31u03t       8/06/94       16         1055         1.0%            
+HISTORY   u2a31w03t       9/06/94       17         1030         1.0%            
+HISTORY   u2a31z04t      17/06/94        4         1101         1.0%            
+HISTORY   u2a32504t      25/06/94       12          807         1.4%            
+HISTORY   u2a32804t      24/06/94       11          751         1.3%            
+HISTORY   u2a32e04t      27/09/94        2         1893         1.3%            
+HISTORY   u2a32m03t      29/09/94        4         1854         0.7%            
+HISTORY                                                                         
+HISTORY   mean                         9.4                                      
+HISTORY                                                                         
+HISTORY   These have been carefully selected to have less that 1.5%             
+HISTORY   peak-to-peak streaks.  This was done by an iterative process: 86      
+HISTORY   individual EARTHFLATs were flattened with the previous F502N IDT      
+HISTORY   flat, and examined.  Ones with >3% peak-to-peak streaks were          
+HISTORY   discarded,                                                            
+HISTORY   and the remaining 31 were used to generate a new flat.  The new flat  
+HISTORY   was used to flatten the EARTHCALs again.  Ones with streaks >1.5%     
+HISTORY   were discarded, and the remaining 21 (listed above, and flattened     
+HISTORY   with the previous F502N IDT flat) are used here.                      
+HISTORY                                                                         
+HISTORY   The 21 Earth flats were combined using the STSDAS/IRAF task           
+HISTORY   XSTREAKFLAT.                                                          
+HISTORY   The PC pixels of the resulting streakflat were then scaled by the     
+HISTORY   ratio of the WF/PC pixel (4.7835) areas to bring the PC up            
+HISTORY   to the intensity of the WF CCD's.                                     
+HISTORY                                                                         
+HISTORY   This streakflat was then normalised and inverted by running           
+HISTORY   it through the STSDAS/IRAF task NORMCLIP, with the maximum            
+HISTORY   threshold set to 10.  Bad columns and pixels were then removed by     
+HISTORY   interpolation using the WFIXUP task.  This image was then divided     
+HISTORY   by the IDT F502N flatfield, e3809354u, to form an illumination        
+HISTORY   correction image.                                                     
+HISTORY                                                                         
+HISTORY   Single pixels in the correction image which differed from             
+HISTORY   surrounding pixels by more than ~2% were reset to the local           
+HISTORY   mean.  This was an effort to minimize the impact of bad pixels        
+HISTORY   on surrounding data.  (These discrepant pixels were also              
+HISTORY   marked in the data quality file or DQF for the output flat.)          
+HISTORY   The result was then smoothed by convolving it with sigma=3            
+HISTORY   pixel Gaussian function over most of the image; near the              
+HISTORY   pyramid vertices smoothing was done in only one dimension             
+HISTORY   (parallel to the vertice).                                            
+HISTORY                                                                         
+HISTORY   Each chip was then divided by the average pixel value in it's central 
+HISTORY   400x400 region, (PC1=0.9863, WF2=0.9792, WF3=0.9772, WF4=0.9780),     
+HISTORY   so as to set the mean correction to unity over the center region      
+HISTORY   of each CCD.  This is an effort to preserve the previous              
+HISTORY   photometric calibration.                                              
+HISTORY                                                                         
+HISTORY   The final step was to multiply this new illumination correction       
+HISTORY   image into the previous IDT flat.  Regions of the F606W output        
+HISTORY   flat exceeding 2.0 were also marked in the data quality file of       
+HISTORY   all flats as being suspect (regions in pyramid shadows).              
+HISTORY                                                                         
+HISTORY   The RMS correction (over central 600x600 pixels) and maximum          
+HISTORY   corrections (over entire CCD) are given in table below.               
+HISTORY   The largest corrections are near the outer edges                      
+HISTORY   of CCDs WF2 and WF3.  The RMS corrections are several times the       
+HISTORY   expected photon noise (recall the correction image is smoothed).      
+HISTORY                                                                         
+HISTORY   CCD        RMS Correction        Max.  Correction                     
+HISTORY   ------          --------------          ----------------              
+HISTORY   1                   0.26%                      1%                     
+HISTORY   2                   0.28%                      4%                     
+HISTORY   3                   0.21%                      8%                     
+HISTORY   4                   0.21%                      1%                     
+HISTORY                                                                         
+HISTORY   The new flats are effectively observed ~9 days after a                
+HISTORY   decontamination.                                                      
+HISTORY                                                                         
+HISTORY   TESTS OF NEW FLAT:                                                    
+HISTORY                                                                         
+HISTORY   To test the precision of the correction image, we derived             
+HISTORY   two independent versions, each using half of the above listed 21      
+HISTORY   F502N EARTHFLATs (i.e. Group A and Group B).  The two test            
+HISTORY   correction images were in excellent agreement.  The table below       
+HISTORY   gives their difference in percent over the central approx. 400x400    
+HISTORY   pixels of each CCD.  The pixel-to-pixel differences are consistent    
+HISTORY   with photon noise.  This indicates the level of residual streaks      
+HISTORY   in the correction image must be very low (~0.03% RMS).                
+HISTORY                                                                         
+HISTORY   CCD               ( Group A - Group B ) in percent                    
+HISTORY   ------         ----------------------------------------------         
+HISTORY           RMS (unsmoothed)    RMS (10 pixel smooth)                     
+HISTORY                  -------------------     ----------------------         
+HISTORY                                                                         
+HISTORY   1              0.27%             0.05%                                
+HISTORY   2              0.29%             0.03%                                
+HISTORY   3              0.23%             0.03%                                
+HISTORY   4              0.23%             0.02%                                
+HISTORY                                                                         
+HISTORY   The new F502N flat was compared against the Earth flat                
+HISTORY   u2a32703t, which appears to have essentially no streaks.              
+HISTORY   Both this Earth flat and new flat are effectively taken               
+HISTORY   ~9 days after a decontamination. This comparison showed               
+HISTORY   a tendency for the new flat to make counts along                      
+HISTORY   the pyramid vertices too high. The largest effect is seen             
+HISTORY   on WF3; comparison of the WF3 CCD center and region near the          
+HISTORY   pyramid appex shows the edges are 0.34% too high after                
+HISTORY   flat fielding.  The reason for this is unclear, but must              
+HISTORY   mean there is some time-variable effect at this level in              
+HISTORY   the input Earth flats.  This effect would seem to average-out         
+HISTORY   when data are summed over many months (i.e. above Group A             
+HISTORY   vs. Group B test), so the timescale for the error must be             
+HISTORY   ~weeks. A possible cause is time-variable scattering by               
+HISTORY   contaminants in the CCD cameras. This error of ~0.3% is               
+HISTORY   probably is indicative of the large-scale errors present              
+HISTORY   in single flattened science images.                                   
+HISTORY                                                                         
+HISTORY   Some indication of the time-dependent effects can be had              
+HISTORY   by comparing the new F502N flat, which is effectively                 
+HISTORY   observed ~9 days after a decon, against Earth                         
+HISTORY   flats taken at different times after a decon.  Comparison             
+HISTORY   against the u2a32k03t Earth flat, which was taken 2 days              
+HISTORY   after a decon, and which again has very little streaking,             
+HISTORY   shows ~0.5% "worms" on WF2.  These are linear features,               
+HISTORY   which in this case, are low relative to the surrounding               
+HISTORY   regions.  These worms are strongest on WF2, and indicate              
+HISTORY   that flat fielding on WF2 to better than 0.5% accuracy                
+HISTORY   will require a separate correction for time-dependent                 
+HISTORY   effects.                                                              
+HISTORY                                                                         
+HISTORY   We can also gain some insight by comparing the new F606W              
+HISTORY   flat against a skyflat from the JHU MDS group.  The skyflat           
+HISTORY   is an average of many long exposures taken over many months,          
+HISTORY   where astrophysical objects have been removed. Below we               
+HISTORY   tabulate the RMS difference between these flats in two                
+HISTORY   regions on the CCDs:                                                  
+HISTORY                                                                         
+HISTORY   CCD                   RMS difference                                  
+HISTORY               [50:800,50:800]     [200:600,200:600]                     
+HISTORY   ---         ---------------     -----------------                     
+HISTORY   1                0.90%                0.28%                           
+HISTORY   2                0.31%                0.17%                           
+HISTORY   3                0.36%                0.22%                           
+HISTORY   4                0.28%                0.20%                           
+HISTORY                                                                         
+HISTORY   These results indicate the RMS errors in the new flats                
+HISTORY   are probably <0.2% near the CCD centers.  The accuracy of             
+HISTORY   the skyflats themselves are not well known; they are                  
+HISTORY   likely to be impacted by many low-level effects including             
+HISTORY   photon noise, warm-pixels, and scintillation of the MgF2              
+HISTORY   CCD windows. Hence, it is quite possible that the RMS                 
+HISTORY   difference is dominated by errors in the skyflat rather               
+HISTORY   than the new flat F606W flat.  Also, some effects in the              
+HISTORY   skyflat, such as MgF2 scintillation, would cause larger               
+HISTORY   errors near the CCD edges, and hence might explain the                
+HISTORY   larger differences there.  In any case, the above differences         
+HISTORY   indicate an upper limit to errors in the new flats of                 
+HISTORY   <0.2% on intermediate scales near the CCD centers.                    
+HISTORY                                                                         
+HISTORY   The pixel-to-pixel photon noise in the new flats can be               
+HISTORY   estimated by comparing two flats at similar wavelengths.              
+HISTORY   Dividing the F555W flat by the F606W flat indicates typical           
+HISTORY   pixel-to-pixel RMS noise is 0.33% in the WFC, and 0.53%               
+HISTORY   in PC1.  The pixel-to-pixel noise is dominated by that in             
+HISTORY   the original IDT flats, rather than in the correction image.          
+HISTORY                                                                         
+HISTORY   In summary, the accuracy of these new flats may be estimated          
+HISTORY   as follows on various spatial scales, when applied to visible         
+HISTORY   wavelength images taken ~9 days after a decontamination:              
+HISTORY                                                                         
+HISTORY   CCD        pixel-to-pixel         >1"           >10"                  
+HISTORY   ----       --------------      ---------      ---------               
+HISTORY   PC1            0.5%              <0.3%          <0.5%                 
+HISTORY   WFC            0.3%              <0.2%          <0.4%                 
+HISTORY                                                                         
+HISTORY   The errors on intermediate scales may be much smaller                 
+HISTORY   than these numbers (perhaps ~0.05%?), though this is                  
+HISTORY   difficult to prove without further tests.                             
+HISTORY                                                                         
+HISTORY   For images taken near the start or end of a decontamination           
+HISTORY   cycle, there will be larger errors up to ~0.5% for                    
+HISTORY   intermediate spatial scales on WF2, due to "worm" artifacts.          
+HISTORY                                                                         
+HISTORY   THE DATA QUALITY FILE:                                                
+HISTORY                                                                         
+HISTORY   The accompanying data quality file has marked in it all               
+HISTORY   pixels which were either suspect, or discarded as "bad"               
+HISTORY   and interpolated across during creation of the flat,                  
+HISTORY   as well as all pixels where the final F606W flat field                
+HISTORY   exceeded ~2.                                                          
+HISTORY                                                                         
+HISTORY   Flat field generated by John Biretta and Michael S. Wiggs (STScI).    
+HISTORY                                                                         
+HISTORY   336flat.r4h renamed to  g6i1148hu.r4h on Tue 11:48:35 18-Jun-96       
+HISTORY                                                                         
+HISTORY                                                                         
+HISTORY   1995-1996 FLATFIELD UPDATE (Koekemoer, Biretta and Mack, STScI)       
+HISTORY   ===============================================================       
+HISTORY                                                                         
+HISTORY   INTRODUCTION:                                                         
+HISTORY                                                                         
+HISTORY   This is an update to the 1994 WFPC2 Flatfields, aimed at taking       
+HISTORY   into account variations in the flatfields that arise as a result of   
+HISTORY   long-term changes in the geometry of the camera optics as well as     
+HISTORY   the appearance of new features. The updated flatfield was created     
+HISTORY   by calculating a "correction" image based on changes from the 1994    
+HISTORY   reference flatfield file, and then applying the correction image      
+HISTORY   multiplicatively to the 1994 reference flatfield to create the        
+HISTORY   new updated flatfield. The new flatfield is appropriate for           
+HISTORY   dates after 1 September 1995, and offers improved calibration of      
+HISTORY   small-scale features and large-scale illumination patterns across     
+HISTORY   the chips, as well as being of sufficient S/N to improve the          
+HISTORY   measurement of the pixel-to-pixel variations across each chip.        
+HISTORY                                                                         
+HISTORY   CALCULATION OF THE FLATFIELD CORRECTION IMAGE:                        
+HISTORY                                                                         
+HISTORY   In order to create the updated flatfield reference files,             
+HISTORY   a "correction" image was first calculated that includes the           
+HISTORY   changes from the 1994 reference flatfield files as a result           
+HISTORY   of long-term changes in the camera optics. This was done by           
+HISTORY   selecting Earthflats taken in the F502N filter after 1 September      
+HISTORY   1995, up to 29 October 1996. During this period the only changes      
+HISTORY   on the flatfields were large-scale features due to long-term          
+HISTORY   changes in the camera optics. After this period, several new          
+HISTORY   dust-spot features appeared on the chips, requiring another set of    
+HISTORY   flatfield files which are discussed separately in a later update.     
+HISTORY                                                                         
+HISTORY   The Earthflats files used in the present update were all taken with   
+HISTORY   the F502N filter at a gain of 15, with exposure times of 1.2 sec.     
+HISTORY   Since we are simply updating the time-dependent change in flatfield,  
+HISTORY   and since the previous flatfield reference files were based soley on  
+HISTORY   data from the F502N filter, we therefore use only F502N in this       
+HISTORY   update as well. The images were selected to have at an average count  
+HISTORY   level in the central 200x200 pixels of at least 500 counts in the PC  
+HISTORY   but no more than 3200 counts in the WF2,3,4 chips, and at the same    
+HISTORY   time requiring that the number of good pixels be at least 500,000.    
+HISTORY   This ensured sufficient counts to provide good S/N, and at the same   
+HISTORY   time avoiding images that are completely saturated, while the         
+HISTORY   criteria were sufficiently flexible to allow the selection of a       
+HISTORY   usefully large number of Earthflats. The resulting selection of       
+HISTORY   Earthflats were then calibrated using the best available bias frames, 
+HISTORY   dark reference files and shutter shading correction files, and were   
+HISTORY   then flattened using the previous (1994) flatfield reference files.   
+HISTORY                                                                         
+HISTORY   The resulting images were carefully examined with image statistics    
+HISTORY   as well as visual inspection in order to select Earthflats that had   
+HISTORY   streak amplitudes of no more than 1.5%, which has previously proven   
+HISTORY   to be a satisfactory criterion for selecting Earthflats. This         
+HISTORY   yielded a total of 36 Earthflats. The validity of this criterion was  
+HISTORY   verified in the present case by dividing these files into two groups  
+HISTORY   of 18 Earthflats each, and combining them separately using the        
+HISTORY   IRAF/STSDAS task "streakflat":                                        
+HISTORY                                                                         
+HISTORY            Group 1                    Group 2                           
+HISTORY     ---------------------     ---------------------                     
+HISTORY     Dataset    Date           Dataset    Date                           
+HISTORY     Name       YYYY-MM-DD     Name       YYYY-MM-DD                     
+HISTORY     ---------  ----------     ---------  ----------                     
+HISTORY     u2xk0103t  1995-09-26     u2xk1103t  1995-11-17                     
+HISTORY     u2xk2v04t  1996-02-17     u2xk3104t  1996-02-21                     
+HISTORY     u2xk4103t  1996-03-19     u2xk4403t  1996-03-21                     
+HISTORY     u2xk4503t  1996-03-23     u2xk4504t  1996-03-23                     
+HISTORY     u2xk4b03t  1996-04-05     u2xk4b04t  1996-04-05                     
+HISTORY     u2xk4c03t  1996-04-05     u2xk4e03t  1996-04-05                     
+HISTORY     u2xk4e04t  1996-04-05     u2xk4f03t  1996-04-06                     
+HISTORY     u2xk4f04t  1996-04-06     u2xk5j03t  1996-05-07                     
+HISTORY     u2xk5k03t  1996-05-07     u2xk5g03t  1996-05-11                     
+HISTORY     u2xk6103t  1996-05-13     u2xk6104t  1996-05-13                     
+HISTORY     u2xk6303t  1996-05-15     u2xk6304t  1996-05-15                     
+HISTORY     u2xk6403t  1996-05-15     u2xk6503t  1996-05-15                     
+HISTORY     u2xk6504t  1996-05-15     u2xk6b04t  1996-06-01                     
+HISTORY     u2xk6e04t  1996-06-01     u2xk6g03t  1996-06-03                     
+HISTORY     u2xk6g04t  1996-06-03     u2xk6h03t  1996-06-07                     
+HISTORY     u2xk6i03t  1996-06-07     u2xk6k03t  1996-06-08                     
+HISTORY     u2xk7d04t  1996-06-24     u3ek1103t  1996-08-30                     
+HISTORY     u3ek2603t  1996-09-19     u3ek3104t  1996-09-23                     
+HISTORY                                                                         
+HISTORY   After combining the images in each group separately with the          
+HISTORY   task "streakflat", the resulting two images were each normalized      
+HISTORY   to unity in their central 400x400 pixels, and bad pixels and          
+HISTORY   columns were corrected in each image using the "wfixup" task.         
+HISTORY   These pixels are also included in the new bad pixel files.            
+HISTORY                                                                         
+HISTORY   Next, the two separate, normalized files produced by "streakflat"     
+HISTORY   were averaged to produce a final "correction" image. Since the        
+HISTORY   1994 flatfield reference file had already been applied to the         
+HISTORY   input Earthflats, this final image represents essentially the         
+HISTORY   change in flatfield characteristics from the 1994 reference           
+HISTORY   files, thus we designate it a "correction" image.                     
+HISTORY                                                                         
+HISTORY   TESTS OF THE NEW FLATFIELD:                                           
+HISTORY                                                                         
+HISTORY   The first test consisted of comparing the two groups of input files   
+HISTORY   against one another, to quantify any residual errors that may be due  
+HISTORY   to features individual Earthflats. After normalizing the images       
+HISTORY   produced by "streakflat" for each of the two groups, we subtracted    
+HISTORY   them and examined the r.m.s. variation in the central 400x400 pixels. 
+HISTORY   We next smoothed the image with a 10-pixel kernel and examined the    
+HISTORY   r.m.s. variation again; the results are shown in the following table: 
+HISTORY                                                                         
+HISTORY              R.m.s. variation (%) for Group 1 - Group 2                 
+HISTORY            ----------------------------------------------               
+HISTORY            r.m.s. (unsmoothed)   r.m.s. (10-pixel smooth)               
+HISTORY            -------------------   ------------------------               
+HISTORY       PC          0.57%                0.05%                            
+HISTORY       WF2         0.26%                0.02%                            
+HISTORY       WF3         0.27%                0.02%                            
+HISTORY       WF4         0.27%                0.02%                            
+HISTORY                                                                         
+HISTORY   Thus, any residual r.m.s. variations due to large-scale features      
+HISTORY   is below the level of around 0.05% on the PC and 0.02% on the WF      
+HISTORY   chips, substantially below the pixel-to-pixel r.m.s. level.           
+HISTORY                                                                         
+HISTORY   We can also calculate the accuracy of calibration provided by the     
+HISTORY   final correction image on pixel scales, and compare with the          
+HISTORY   predicted r.m.s. (using the mean measured count-rates):               
+HISTORY                                                                         
+HISTORY            R.m.s. variation (central 400x400)                           
+HISTORY            Correction image     Group 1 / Group 2                       
+HISTORY            ----------------     -----------------                       
+HISTORY            Measured Predicted   Measured Predicted                      
+HISTORY       PC     0.66%     0.21%      0.56%    0.30%                        
+HISTORY       WF2    0.39%     0.10%      0.26%    0.13%                        
+HISTORY       WF3    0.57%     0.10%      0.27%    0.13%                        
+HISTORY       WF4    0.56%     0.10%      0.27%    0.13%                        
+HISTORY                                                                         
+HISTORY   The fact that the measured r.m.s. for the correction image is         
+HISTORY   several times higher than the predicted r.m.s. (factors of 3-6)       
+HISTORY   suggests the presence of substantial structure on pixel scales.       
+HISTORY   This is confirmed by the fact that the measured r.m.s. of the ratio   
+HISTORY   image decreases, which means that the pixel-scale structure is        
+HISTORY   the same in the two groups, and any remaining offset from the         
+HISTORY   prediced r.m.s. is likely due to residual streak features and         
+HISTORY   calibration uncertainties in the darks and biases on levels ~0.1%.    
+HISTORY                                                                         
+HISTORY   Thus, we conclude that our final correction flat has the following    
+HISTORY   characteristics, where the r.m.s. measurement accuracy of the         
+HISTORY   combined flat is estimated as being better by sqrt(2) than the        
+HISTORY   r.m.s. of the ratio between Group 1 and Group 2 as shown above,       
+HISTORY   while the level of correction for features on larger scales is        
+HISTORY   determined by the peak-to-peak amplitude of appropriately smoothed    
+HISTORY   versions of the correction image:                                     
+HISTORY                                             PC    WF2,3,4               
+HISTORY                                             ---   ------                
+HISTORY   r.m.s. measurement accuracy               0.4%  0.2%                  
+HISTORY   Level of correction on pixel scales       0.7%  0.5%                  
+HISTORY   Amplitude of correction on scales > 1"    0.3%  0.3%                  
+HISTORY   Amplitude of correction on scales > 10"   0.3%  0.2%                  
+HISTORY                                                                         
+HISTORY   The final step involved multiplying this correction image into the    
+HISTORY   prvious flatfield reference file, thereby yielding the new corrected  
+HISTORY   flatfield file for dates from 1 September 1995 to 29 October 1996.    
+HISTORY   The "addmasks" task was used to create a corresponding bad pixel      
+HISTORY   mask file in each case, by combining mask information from the        
+HISTORY   previous reference flatfield file with the new bad pixel information  
+HISTORY   generated when calculating the correction image.                      
+HISTORY                                                                         
+HISTORY   Flatfield generated by Anton Koekemoer, John Biretta, Jennifer Mack   
+HISTORY   (STScI); Instrument Science Report WFPC2-2002-02.                     
+HISTORY                                                                         
+HISTORY   f336w_A.r4h renamed to m341819pu.r4h on Mar 4 2002                    
+HISTORY                                                                         
+HISTORY                                                                         
+HISTORY   1996-2001 FLATFIELD UPDATE (Koekemoer, Biretta and Mack, STScI)       
+HISTORY   ===============================================================       
+HISTORY                                                                         
+HISTORY   INTRODUCTION:                                                         
+HISTORY                                                                         
+HISTORY   This is an update to the 1995/1996 WFPC2 flatfields, aimed at taking  
+HISTORY   into account variations in the flatfields that arise as a result of   
+HISTORY   long-term changes in the geometry of the camera optics as well as     
+HISTORY   the appearance of new features. The updated flatfield was created     
+HISTORY   by calculating a "correction" image based on changes from the         
+HISTORY   1995/1996 reference flatfield file, and then applying the correction  
+HISTORY   image multiplicatively to those reference flatfields to create the    
+HISTORY   new updated flatfields. The new flatfield is appropriate for          
+HISTORY   dates after 30 October 1996, and offers improved calibration of       
+HISTORY   small-scale features and large-scale illumination patterns across     
+HISTORY   the chips, as well as being of sufficient S/N to improve the          
+HISTORY   measurement of the pixel-to-pixel variations across each chip.        
+HISTORY   Moreover, the new flatfields include color-dependent effects by       
+HISTORY   being generated from Earthflats taken with a wide range of filters.   
+HISTORY                                                                         
+HISTORY   CALCULATION OF THE FLATFIELD CORRECTION IMAGE:                        
+HISTORY                                                                         
+HISTORY   The Earthflats used in creating the correction images were selected   
+HISTORY   from the period between 30 October 1996 and 30 April 2001. The start  
+HISTORY   of this period coincides with the appearance of several prominent new 
+HISTORY   dust-spot features. particularly on the WF2 chip, while changes       
+HISTORY   throughout the rest of this timeframe are relatively minor. The end   
+HISTORY   of this timeframe is defined by the appearance of new features, most  
+HISTORY   prominently on the WF4 chip. Since the correction is based on the     
+HISTORY   difference between 1995/1996 files and those from 1996-2001,          
+HISTORY   Earthflats for both epochs were retrieved, for a range of filters,    
+HISTORY   and the differences were calculated for each filter separately        
+HISTORY   before being combined.                                                
+HISTORY                                                                         
+HISTORY   The flatfield files used in the present update were taken with the    
+HISTORY   narrow-band filters listed in the following table, all exposures      
+HISTORY   being at a gain of 15. The filters were chosen to bracket the         
+HISTORY   wavelength of the current filter to which this flatfield reference    
+HISTORY   file applies. The images were selected to have at an average          
+HISTORY   count level in the central 200x200 pixels of at least 500 counts in   
+HISTORY   the PC but no more than 3200 counts in the WF2,3,4 chips, and at      
+HISTORY   the same time requiring that the number of good pixels be at          
+HISTORY   least 500,000. This ensured sufficient counts to provide good S/N,    
+HISTORY   and at the same time avoiding images that are completely saturated,   
+HISTORY   while the criteria were sufficiently flexible to allow the selection  
+HISTORY   of a usefully large number of Earthflats. The resulting selection of  
+HISTORY   Earthflats were then calibrated using the best available bias frames, 
+HISTORY   dark reference files and shutter shading correction files, and were   
+HISTORY   then flattened using the earlier (1994) flatfield reference files.    
+HISTORY                                                                         
+HISTORY   The resulting images were carefully examined with image statistics    
+HISTORY   as well as visual inspection in order to select Earthflats that had   
+HISTORY   streak amplitudes of no more than 1.5%, which has previously proven   
+HISTORY   to be a satisfactory criterion for selecting Earthflats. This was     
+HISTORY   already validated in the creation of the 1995/1996 flatfield          
+HISTORY   reference files by subdividing the Earthflats into two groups each;   
+HISTORY   in the present case this was confirmed by subdividing the Earthflats  
+HISTORY   for the various filters into multiple groups, then combinining them   
+HISTORY   with the "streakflat" task, and subsequently verifying that there     
+HISTORY   were no significant systematic differences between the sub-groups.    
+HISTORY                                                                         
+HISTORY                       Number of files used                              
+HISTORY      Filter Exptime   1995-1996  1996-2001                              
+HISTORY      ------ -------   ---------  ---------                              
+HISTORY      F343N   14.0s       14          90                                 
+HISTORY      F375N   14.0s       20          52                                 
+HISTORY      F390N    1.6s       12          60                                 
+HISTORY                                                                         
+HISTORY   After combining the Earthflats for each filter and each of the two    
+HISTORY   date ranges into a single correction image using the "streakflat"     
+HISTORY   task, the resulting images were then normalized to unity in their     
+HISTORY   central 400x400 pixels, and bad pixels and columns were corrected     
+HISTORY   in each image using the "wfixup" task. These pixels are also included 
+HISTORY   in the new bad pixel files.                                           
+HISTORY                                                                         
+HISTORY   Next, a ratio image was created for each filter, representing the     
+HISTORY   multiplicative change between the 1995-1996 flatfield and the         
+HISTORY   1996-2001 flatfield. The ratio images for the the individual filters  
+HISTORY   were then averaged together to produce a final correction image;      
+HISTORY   the advantage of this is that any filter-dependent features cancel    
+HISTORY   out between the two epochs, with the only remaining variation         
+HISTORY   being the result of time-dependent changes across the flatfields.     
+HISTORY   Applying this image to the 1995-1996 flatfield reference files        
+HISTORY   produces the final flatfield reference files for the 1996-2001        
+HISTORY   timeframe.                                                            
+HISTORY                                                                         
+HISTORY   TESTS OF THE NEW FLATFIELD:                                           
+HISTORY                                                                         
+HISTORY   We tested the flatfield correction image in a number of ways.         
+HISTORY   Firstly, we measured the pixel-to-pixel r.m.s. variation in the       
+HISTORY   two epochs separately (1995-1996 and 1996-2001), for the central      
+HISTORY   400x400 pixels in each filter independently, and compared this with   
+HISTORY   the expected r.m.s. variation. As we had found earlier when creating  
+HISTORY   the 1995-1996 updates, the measured r.m.s. is several times higher    
+HISTORY   than the expected r.m.s. We next calculated the r.m.s. of the ratio   
+HISTORY   image, for each filter, and found that it was significantly lower     
+HISTORY   that the r.m.s. measured separately for each of the two epochs,       
+HISTORY   indicating the presence of well-measured structure on these scales.   
+HISTORY   The results of these tests are shown in the following table.          
+HISTORY                                                                         
+HISTORY              Measured r.m.s. values (unsmoothed) for each filter.       
+HISTORY                                                                         
+HISTORY                 1995-1996            1996-2001             Ratio        
+HISTORY            ------------------   ------------------   ------------------ 
+HISTORY    Filter  Measured Predicted   Measured Predicted   Measured Predicted 
+HISTORY    ------  -------- ---------   -------- ---------   -------- --------- 
+HISTORY    F343N:                                                               
+HISTORY     PC       1.16%   0.35%        1.08%   0.14%        0.52%   0.37%    
+HISTORY     WF2      0.80%   0.16%        0.81%   0.06%        0.24%   0.17%    
+HISTORY     WF3      0.71%   0.16%        0.69%   0.06%        0.24%   0.17%    
+HISTORY     WF4      0.97%   0.16%        1.07%   0.06%        0.28%   0.17%    
+HISTORY    F375N:                                                               
+HISTORY     PC       0.67%   0.29%        0.61%   0.18%        0.44%   0.34%    
+HISTORY     WF2      0.47%   0.13%        0.47%   0.08%        0.21%   0.16%    
+HISTORY     WF3      0.49%   0.13%        0.49%   0.08%        0.21%   0.16%    
+HISTORY     WF4      0.55%   0.13%        0.55%   0.08%        0.21%   0.16%    
+HISTORY    F390N:                                                               
+HISTORY     PC       0.72%   0.37%        0.60%   0.17%        0.53%   0.41%    
+HISTORY     WF2      0.42%   0.17%        0.40%   0.08%        0.25%   0.19%    
+HISTORY     WF3      0.48%   0.17%        0.46%   0.08%        0.26%   0.19%    
+HISTORY     WF4      0.47%   0.17%        0.45%   0.08%        0.26%   0.19%    
+HISTORY                                                                         
+HISTORY   The fact that the measured r.m.s. for the correction image is         
+HISTORY   several times higher than the predicted r.m.s. (factors of ~3)        
+HISTORY   suggests the presence of substantial structure on pixel scales.       
+HISTORY   This is confirmed by the fact that the measured r.m.s. of the ratio   
+HISTORY   image decreases, which means that the pixel-scale structure is        
+HISTORY   the same in the two groups, and any remaining offset from the         
+HISTORY   prediced r.m.s. is likely due to residual streak features and         
+HISTORY   calibration uncertainties in the darks and biases on levels ~0.1%.    
+HISTORY                                                                         
+HISTORY   We next created an average correction image, combining the ratio      
+HISTORY   correction images for the three filters. Combining the ratio images   
+HISTORY   has the advantage of including only the time-dependent changes,       
+HISTORY   while all filter-dependent features cancel out, and thus provides     
+HISTORY   a high S/N measure of the change between the two epochs. In the       
+HISTORY   following table we show the measured r.m.s. of the correction ratio   
+HISTORY   image, for the central 400x400 pixels of each of the four WFPC2       
+HISTORY   chips, and compared with the predicted ratios (based on the mean      
+HISTORY   countrate, the gain, and the number of images in each case).          
+HISTORY                                                                         
+HISTORY      Final flatfield correction ratio image:                            
+HISTORY            Measured r.m.s.    Predicted r.m.s.                          
+HISTORY            ---------------    ---------------                           
+HISTORY      PC         0.30%             0.21%                                 
+HISTORY      WF2        0.15%             0.09%                                 
+HISTORY      WF3        0.14%             0.09%                                 
+HISTORY      WF4        0.15%             0.09%                                 
+HISTORY                                                                         
+HISTORY   Thus, we conclude that our final correction flat has a local r.m.s.   
+HISTORY   measurement accuracy ~0.1-0.2% (for the WF chips and PC               
+HISTORY   respectively), estimated as being better by sqrt(2) than the          
+HISTORY   r.m.s. of the measured ratio shown above. We note that on larger      
+HISTORY   scales, differences with some large-scale features present in the     
+HISTORY   original reference flatfields may remain, simply due to the fact      
+HISTORY   that our averaged flatfield produced here may not exactly reproduce   
+HISTORY   all the features of every filter in the WFPC2 filter set. Thus,       
+HISTORY   while we remain confident that time-dependent changes have now        
+HISTORY   been calibrated to levels of ~0.15-0.3% for the WF and PC chips,      
+HISTORY   it remains possible that large-scale features peculiar to individual  
+HISTORY   filters may remain at levels ~0.3-0.5%.                               
+HISTORY                                                                         
+HISTORY   The final step involved multiplying this correction image into the    
+HISTORY   prvious flatfield reference file, thereby yielding the new corrected  
+HISTORY   flatfield file for dates from 30 October 1996 to 30 April 2001.       
+HISTORY   The "addmasks" task was used to create a corresponding bad pixel      
+HISTORY   mask file in each case, by combining mask information from the        
+HISTORY   previous reference flatfield file with the new bad pixel information  
+HISTORY   generated when calculating the correction image.                      
+HISTORY                                                                         
+HISTORY   Flatfield generated by Anton Koekemoer, John Biretta, Jennifer Mack   
+HISTORY   (STScI); Instrument Science Report WFPC2-2002-02.                     
+HISTORY                                                                         
+HISTORY   f336w_B.r4h renamed to m3c10043u.r4h on Mar 12 2002                   
+END                                                                             

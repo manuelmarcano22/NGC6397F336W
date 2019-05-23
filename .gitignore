@@ -1,0 +1,20 @@
+# Ignore folder pyraf/
+pyraf/
+
+
+# Ignore the tar file with the data
+*.tar
+
+# Ignore fits files and compressed fits file
+*.fits
+*.fits.bz2
+!raw/S*.fits
+
+
+#Python and notebook related
+*.py[co]
+__pycache__
+.ipynb_checkpoints
+
+
+
