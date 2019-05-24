@@ -1,5 +1,0 @@
-images,s,a,'u9710103m_c0m.fits[1]',,,'images from which selection is to be drawn'
-fields,s,a,'$I,date-obs',,,'fields to be extracted'
-expr,s,a,'yes',,,'boolean expression governing selection'
-missing,s,h,'INDEF',,,'Value for missing keywords'
-mode,s,h,'al'

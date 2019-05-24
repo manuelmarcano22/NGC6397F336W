@@ -10,6 +10,13 @@ pyraf/
 *.fits.bz2
 !raw/S*.fits
 
+#Offsetsa and catalogs
+*c0m.png
+*.coo
+*.match
+
+#Hubble references
+**/reference_files
 
 #Python and notebook related
 *.py[co]
