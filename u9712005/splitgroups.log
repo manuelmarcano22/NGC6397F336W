@@ -1,0 +1,148 @@
+Reading FITS file Try/final_drz_sci.chip0.chip0.fits: 1549x1527
+Writing FITS file Try/final_drz_sci.chip0.chip0.chip0.fits: 1549x1527
+Reading FITS file Try/final_drz_sci.chip0.fits: 1549x1527
+Writing FITS file Try/final_drz_sci.chip0.chip0.fits: 1549x1527
+Reading FITS file Try/final_drz_sci.chip1.chip0.fits: 2307x504
+Writing FITS file Try/final_drz_sci.chip1.chip0.chip0.fits: 2307x504
+Reading FITS file Try/final_drz_sci.chip1.fits: 2307x504
+Writing FITS file Try/final_drz_sci.chip1.chip0.fits: 2307x504
+Reading FITS file Try/final_drz_sci.fits: 1549x1527
+Reading BINTABLE extension: 2307x504
+Writing FITS file Try/final_drz_sci.chip0.fits: 1549x1527
+Writing FITS file Try/final_drz_sci.chip1.fits: 2307x504
+Reading FITS file Try/u9710103m_c0f.chip0.chip0.fits: 800x800x4
+Writing FITS file Try/u9710103m_c0f.chip0.chip0.chip0.fits: 800x800x4
+Reading FITS file Try/u9710103m_c0f.chip0.fits: 800x800x4
+Writing FITS file Try/u9710103m_c0f.chip0.chip0.fits: 800x800x4
+Reading FITS file Try/u9710103m_c0f.chip1.chip0.fits: 908x4
+Writing FITS file Try/u9710103m_c0f.chip1.chip0.chip0.fits: 908x4
+Reading FITS file Try/u9710103m_c0f.chip1.fits: 908x4
+Writing FITS file Try/u9710103m_c0f.chip1.chip0.fits: 908x4
+Reading FITS file Try/u9710103m_c0f.fits: 800x800x4
+Reading TABLE extension: 908x4
+Writing FITS file Try/u9710103m_c0f.chip0.fits: 800x800x4
+Writing FITS file Try/u9710103m_c0f.chip1.fits: 908x4
+Reading FITS file Try/u9710103m_c0m.chip1.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip1.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.chip1.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip1.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.chip2.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip2.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.chip2.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip2.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.chip3.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip3.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.chip3.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip3.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.chip4.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip4.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.chip4.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip4.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c0m.fits
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Writing FITS file Try/u9710103m_c0m.chip1.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip2.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip3.fits: 800x800
+Writing FITS file Try/u9710103m_c0m.chip4.fits: 800x800
+Reading FITS file Try/u9710103m_c1f.chip0.chip0.fits: 800x800x4
+Writing FITS file Try/u9710103m_c1f.chip0.chip0.chip0.fits: 800x800x4
+Reading FITS file Try/u9710103m_c1f.chip0.fits: 800x800x4
+Writing FITS file Try/u9710103m_c1f.chip0.chip0.fits: 800x800x4
+Reading FITS file Try/u9710103m_c1f.chip1.chip0.fits: 908x4
+Writing FITS file Try/u9710103m_c1f.chip1.chip0.chip0.fits: 908x4
+Reading FITS file Try/u9710103m_c1f.chip1.fits: 908x4
+Writing FITS file Try/u9710103m_c1f.chip1.chip0.fits: 908x4
+Reading FITS file Try/u9710103m_c1f.fits: 800x800x4
+Reading TABLE extension: 908x4
+Writing FITS file Try/u9710103m_c1f.chip0.fits: 800x800x4
+Writing FITS file Try/u9710103m_c1f.chip1.fits: 908x4
+Reading FITS file Try/u9710103m_c1m.chip1.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip1.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.chip1.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip1.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.chip2.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip2.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.chip2.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip2.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.chip3.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip3.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.chip3.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip3.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.chip4.chip0.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip4.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.chip4.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip4.chip0.fits: 800x800
+Reading FITS file Try/u9710103m_c1m.fits
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Writing FITS file Try/u9710103m_c1m.chip1.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip2.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip3.fits: 800x800
+Writing FITS file Try/u9710103m_c1m.chip4.fits: 800x800
+Reading FITS file Try/u9710106m_c0f.chip0.chip0.fits: 800x800x4
+Writing FITS file Try/u9710106m_c0f.chip0.chip0.chip0.fits: 800x800x4
+Reading FITS file Try/u9710106m_c0f.chip0.fits: 800x800x4
+Writing FITS file Try/u9710106m_c0f.chip0.chip0.fits: 800x800x4
+Reading FITS file Try/u9710106m_c0f.chip1.chip0.fits: 908x4
+Writing FITS file Try/u9710106m_c0f.chip1.chip0.chip0.fits: 908x4
+Reading FITS file Try/u9710106m_c0f.chip1.fits: 908x4
+Writing FITS file Try/u9710106m_c0f.chip1.chip0.fits: 908x4
+Reading FITS file Try/u9710106m_c0f.fits: 800x800x4
+Reading TABLE extension: 908x4
+Writing FITS file Try/u9710106m_c0f.chip0.fits: 800x800x4
+Writing FITS file Try/u9710106m_c0f.chip1.fits: 908x4
+Reading FITS file Try/u9710106m_c0m.chip1.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip1.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.chip1.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip1.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.chip2.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip2.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.chip2.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip2.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.chip3.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip3.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.chip3.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip3.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.chip4.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip4.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.chip4.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip4.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c0m.fits
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Writing FITS file Try/u9710106m_c0m.chip1.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip2.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip3.fits: 800x800
+Writing FITS file Try/u9710106m_c0m.chip4.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip1.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip1.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip1.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip1.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip2.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip2.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip2.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip2.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip3.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip3.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip3.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip3.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip4.chip0.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip4.chip0.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.chip4.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip4.chip0.fits: 800x800
+Reading FITS file Try/u9710106m_c1m.fits
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Reading IMAGE extension: 800x800
+Writing FITS file Try/u9710106m_c1m.chip1.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip2.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip3.fits: 800x800
+Writing FITS file Try/u9710106m_c1m.chip4.fits: 800x800
