@@ -1,6 +1,5 @@
 # Ignore folder pyraf/
 pyraf/
-login.cl
 
 
 # Ignore the tar file with the data
