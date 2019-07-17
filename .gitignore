@@ -1,5 +1,6 @@
 # Ignore folder pyraf/
 pyraf/
+login.cl
 
 
 # Ignore the tar file with the data
@@ -23,6 +24,5 @@ pyraf/
 *.py[co]
 __pycache__
 .ipynb_checkpoints
-
 
 
