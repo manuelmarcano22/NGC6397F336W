@@ -24,4 +24,5 @@ pyraf/
 __pycache__
 .ipynb_checkpoints
 
-
+#DOLPHOT
+*.photo
