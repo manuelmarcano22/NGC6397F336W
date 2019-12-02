@@ -1,0 +1,1 @@
+dolphot out -pdolphot.param
