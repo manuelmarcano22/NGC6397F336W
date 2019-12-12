@@ -23,6 +23,57 @@ class DolphotParameters(object):
     
     Parameters
     ----------
+     psfA : tuple
+            PSF XX term, length 6. Set the PSF x-FWHM and linear and quadratic
+            variations. This value can be an initial guess that is later
+            adjusted by DOLPHOT.
+        psfB : tuple
+            PSF YY term, length 6. Set the PSF y-FWHM and linear and quadratic
+            variations. This value can be an initial guess that is later
+            adjusted by DOLPHOT.
+        psfC : tuple
+            PSF XY term, length 6. Set the PSF eccentricity and linear and
+            quadratic variations. This value can be an initial guess that is
+            later adjusted by DOLPHOT.
+        shift : tuple
+            x,y shifts relative to reference. Set offset of image relative to
+            reference. This value can be an initial guess that is later
+            adjusted by DOLPHOT. Values are x and y on the image minus x and y
+            on the reference image. Note that this parameter should not be set
+            for the reference image.
+        xform : tuple
+            Set the scale ratio, cubic distortion, and rotation of the image
+            relative to the reference image. This value can be an initial
+            guess that is later ad- justed by DOLPHOT. Note that this
+            parameter should not be set for the reference image.
+        aprad : real
+            Radius for aperture correction
+        apsky : tuple
+            Set the inner and outer radii of the annulus used for calculating
+            sky values for aperture corrections.
+        raper : real
+            Sets the size of the aperture within which photometry will be
+            performed. For FitSky=0 or 1, this should include most of the
+            light of the star. For FitSky=2, 3, or 4 options, this should also
+            include significant “sky” area outside the star.
+        rsky : tuple
+            Inner, outer radius for computing sky values, if FitSky=1 is being
+            used. This should be outside the bulk of the light from the star.
+            Outer radius should be sufficiently large to compute an accurate
+            sky.
+        rpsf : int
+            Size of the PSF used for star subtraction. The rule of thumb is to
+            make sure this is sufficiently large that significant unsubtracted
+            star light is not seen beyond the subtracted regions in the
+            residual image.
+        rchi : real
+            Sets the size of the aperture within which the chi value will be
+            calculated. This is used to determine object locations. This
+            should generally include only the peak of the stellar PSF. RChi
+            cannot be larger than RAper. If not defined, RChi is set equal to
+            RAper.
+    
+    
     PSFPhot : int
         Type of photometry to be run. Options are
 
@@ -197,7 +248,11 @@ class DolphotParameters(object):
         extension (usually 0), Z (usually 1), minimum X, minimum Y, maximum X,
         maximum Y.
     """
-    def __init__(self, PSFPhot=1, FitSky=2, SkipSky=2, SkySig=2.25,
+    def __init__(self, psfA=(3, 0, 0, 0, 0, 0),
+            psfB=(3, 0, 0, 0, 0, 0), psfC=(0, 0, 0, 0, 0, 0),
+            shift=(0, 0), xform=(1, 0, 0), aprad=0.5, apsky=(15, 25),
+            RAper=3, RSky2=(4.0, 10.0), RChi=2, RSky=(15.0, 35.0) , RPSF=13,
+            PSFPhot=1, FitSky=2, SkipSky=2, SkySig=2.25,
             SigFind=2.5, SigFindMult=0.85,
             SigFinal=3.0, MaxIT=25, NoiseMult=0.10, FSat=0.999, Zero=25.0,
             RCentroid=2, PosStep=0.25,
@@ -210,10 +265,16 @@ class DolphotParameters(object):
             ApCor=1, SubPixel=1,
             FakeStars=None, FakeMatch=3., FakeStarPSF=0, FakePSF=1.5,
             RandomFake=1,
-            xytfile=None, xytpsf=None, photsec=None):
+            xytfile=None, xytpsf=None, photsec=None,
+                WFPC2useCTE=1,FlagMask=4):
         self.refImageParams = None
         self.imageParams = []
-        self.params = {"PSFPhot": PSFPhot, "FitSky": FitSky,
+        self.params = {"img_psfa": psfA, "img_psfb": psfB,
+                "img_psfc": psfC, "img_shift": shift, "img_xform": xform,
+                "img_aprad": aprad, "img_apsky": apsky,
+                "img_RSky": RSky,"img_RSky2": RSky2, "img_RAper": RAper, "img_RChi": RChi,
+                "img_RPSF": RPSF,
+            "PSFPhot": PSFPhot, "FitSky": FitSky,
             "SkipSky": SkipSky,
             "SkySig": SkySig, "SigFind": SigFind, "SigFindMult": SigFindMult,
             "SigFinal": SigFinal, "MaxIT": MaxIT, "NoiseMult": NoiseMult,
@@ -228,13 +289,10 @@ class DolphotParameters(object):
             "ApCor": ApCor, "SubPixel": SubPixel, "FakeStars": FakeStars,
             "FakeMatch": FakeMatch, "FakeStarPSF": FakeStarPSF,
             "FakePSF": FakePSF, "RandomFake": RandomFake,
-            "xytfile": xytfile, "xytpsf": xytpsf, "photsec": photsec}
+            "xytfile": xytfile, "xytpsf": xytpsf, "photsec": photsec,
+                      "WFPC2useCTE":WFPC2useCTE,"FlagMask":FlagMask}
 
-    def setup_image(self, path, psfA=(3, 0, 0, 0, 0, 0),
-            psfB=(3, 0, 0, 0, 0, 0), psfC=(0, 0, 0, 0, 0, 0),
-            shift=(0, 0), xform=(1, 0, 0), aprad=10, apsky=(15, 25),
-            RAper=2.5, RSky2=(4.0, 10.0), RChi=2, RSky=(15.0, 25.0) , RPSF=10,
-            ref=False):
+    def setup_image(self, path, ref=False):
         """Configure the fitting parameters for a single image. This may
         also be the reference image if `ref=True` is set.
         
@@ -242,66 +300,14 @@ class DolphotParameters(object):
         ----------
         path : str
             file path of FITS file (without the .fits suffix)
-        psfA : tuple
-            PSF XX term, length 6. Set the PSF x-FWHM and linear and quadratic
-            variations. This value can be an initial guess that is later
-            adjusted by DOLPHOT.
-        psfB : tuple
-            PSF YY term, length 6. Set the PSF y-FWHM and linear and quadratic
-            variations. This value can be an initial guess that is later
-            adjusted by DOLPHOT.
-        psfC : tuple
-            PSF XY term, length 6. Set the PSF eccentricity and linear and
-            quadratic variations. This value can be an initial guess that is
-            later adjusted by DOLPHOT.
-        shift : tuple
-            x,y shifts relative to reference. Set offset of image relative to
-            reference. This value can be an initial guess that is later
-            adjusted by DOLPHOT. Values are x and y on the image minus x and y
-            on the reference image. Note that this parameter should not be set
-            for the reference image.
-        xform : tuple
-            Set the scale ratio, cubic distortion, and rotation of the image
-            relative to the reference image. This value can be an initial
-            guess that is later ad- justed by DOLPHOT. Note that this
-            parameter should not be set for the reference image.
-        aprad : real
-            Radius for aperture correction
-        apsky : tuple
-            Set the inner and outer radii of the annulus used for calculating
-            sky values for aperture corrections.
-        raper : real
-            Sets the size of the aperture within which photometry will be
-            performed. For FitSky=0 or 1, this should include most of the
-            light of the star. For FitSky=2, 3, or 4 options, this should also
-            include significant “sky” area outside the star.
-        rsky : tuple
-            Inner, outer radius for computing sky values, if FitSky=1 is being
-            used. This should be outside the bulk of the light from the star.
-            Outer radius should be sufficiently large to compute an accurate
-            sky.
-        rpsf : int
-            Size of the PSF used for star subtraction. The rule of thumb is to
-            make sure this is sufficiently large that significant unsubtracted
-            star light is not seen beyond the subtracted regions in the
-            residual image.
-        rchi : real
-            Sets the size of the aperture within which the chi value will be
-            calculated. This is used to determine object locations. This
-            should generally include only the peak of the stellar PSF. RChi
-            cannot be larger than RAper. If not defined, RChi is set equal to
-            RAper.
+       
         ref : bool
             set as True if this is the reference image, False otherwise
         """
         # Chop off the .fits extension if necessary
         if path.endswith(".fits"):
             path = os.path.splitext(path)[0]
-        imageDoc = {"file": path, "psfa": psfA, "psfb": psfB,
-                "psfc": psfC, "shift": shift, "xform": xform,
-                "aprad": aprad, "apsky": apsky,
-                "RSky": RSky, "RAper": RAper, "RChi": RChi,
-                "RPSF": RPSF, }
+        imageDoc = {"file": path,  }
         if ref == True:
             self.refImageParams = imageDoc
         else:
@@ -336,18 +342,7 @@ class DolphotParameters(object):
             Number of the image. Reference image is 0.
         """
         prefix = "img%i_" % n
-        formatters = {"file": "%s",
-                "psfa": "%.2f %.2f %.2f %.2f %.2f %.2f",
-                "psfb": "%.2f %.2f %.2f %.2f %.2f %.2f",
-                "psfc": "%.2f %.2f %.2f %.2f %.2f %.2f",
-                "shift": "%.2f %.2f",
-                "xform": "%.2f %.2f %.2f",
-                "aprad": "%.2f",
-                "apsky": "%.2f %.2f",
-                "RSky": "%.2f %.2f",
-                "RAper": "%.2f",
-                "RChi": "%.2f",
-                "RPSF": "%i"}
+        formatters = {"file": "%s"}
         lines = []
         for key, p in params.items():
             if p is None: continue
@@ -361,7 +356,19 @@ class DolphotParameters(object):
     def _write_general_params(self):
         """Produces a list of strings for the general parameters not associated
         with specific images."""
-        formatters = {"PSFPhot": "%i", "FitSky": "%i", "SkipSky": "%i",
+        formatters = {"img_psfa": "%.2f %.2f %.2f %.2f %.2f %.2f",
+                "img_psfb": "%.2f %.2f %.2f %.2f %.2f %.2f",
+                "img_psfc": "%.2f %.2f %.2f %.2f %.2f %.2f",
+                "img_shift": "%.2f %.2f",
+                "img_xform": "%.2f %.2f %.2f",
+                "img_aprad": "%.2f",
+                "img_apsky": "%.2f %.2f",
+                "img_RSky": "%.2f %.2f",
+                "img_RSky2": "%.2f %.2f",
+                "img_RAper": "%.2f",
+                "img_RChi": "%.2f",
+                "img_RPSF": "%i",
+            "PSFPhot": "%i", "FitSky": "%i", "SkipSky": "%i",
             "SkySig": "%.2f", "SigFind": "%.2f", "SigFindMult": "%.2f",
             "SigFinal": "%.2f", "MaxIT": "%i", "NoiseMult": "%.2f",
             "FSat": "%.2f", "Zero": "%.2f",
@@ -376,7 +383,8 @@ class DolphotParameters(object):
             "SubPixel": "%i", "FakeStars": "%s", "FakeMatch": "%.2f",
             "FakeStarPSF": "%i", "FakePSF": "%.2f", "RandomFake": "%i",
             "xytfile": "%s", "xytpsf": "%s",
-            "photsec": "%i %i %i %i %i %i"}
+            "photsec": "%i %i %i %i %i %i",
+                     "WFPC2useCTE":"%i","FlagMask":"%i"}
         lines = []
         for key, p in self.params.items():
             if p is None: continue
