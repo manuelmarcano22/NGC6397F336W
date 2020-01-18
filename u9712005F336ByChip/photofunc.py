@@ -2,15 +2,16 @@ from astropy.io import fits
 from astropy.wcs import WCS
 import numpy as np
 from astropy.time import Time
-import os, sys
+import os
 from scipy.signal import lombscargle
 from bokeh.palettes import viridis, inferno
-import subprocess
+
 from bokeh.plotting import output_notebook, figure, show
 from bokeh.models import HoverTool, tools,ColumnDataSource, Whisker, ColorBar, LinearColorMapper
-output_notebook()
+#output_notebook()
 
 from bokeh.models import LogColorMapper, LogTicker, ColorBar
+from bokeh.models.glyphs import Text
 from astropy.timeseries import LombScargle
 
 import matplotlib.pyplot as plt
@@ -18,40 +19,30 @@ import matplotlib.pyplot as plt
 # use seaborn for plot styles
 import seaborn; seaborn.set()
 
+from astropy import units as u
+from astropy.coordinates import SkyCoord
 
 
+from bokeh.models.ranges import Range1d
 
-outputfile = 'outdir/out.photo'
-columnfile = 'outdir/out.columns'
-
-
-
-
-def getobjectdataold(datafile,index,name='name'):
-    command = "sed '{}q;d'  {}".format(index+1,datafile)
-    print(command)
-    #datastring = ! {command}
-    datalist = datastring[0].split()
-    print(datalist[2:4])
-    return datalist
+import aplpy
+from PyAstronomy.pyTiming import pyPDM
+#output_notebook()
 
 
 def getobjectdata(datafile,index,name='name'):
     command = "sed '{}q;d'  {}".format(index+1,datafile)
     print(command)
-    #datastring = ! {command}
-    datastring2 = subprocess.check_output(command, shell=True)
-    #print('a',datastring)
-    datalist = datastring2.split()
-    #print(datalist[2:4])
+    datastring = ! {command}
+    datalist = datastring[0].split()
+    print(datalist[2:4])
     return datalist
 
 
 
-
-
 def getvegamaganddates(data,columnfile,name):
-    vegamagindex = np.arange(28,6568,13)
+    vegamagindex = np.arange(28,1653,13)
+    #vegamagindex = np.arange(28,6568,13)
     
     
     vegamaglist = np.array([float(data[i]) for i in vegamagindex])
@@ -103,7 +94,7 @@ def createdatadicclean(datafile,index,columnfile,name='name',timeformat='datetim
     goodvegamagindex = np.where(vegamag < 99)[0]
     goodphotoindex = np.where(photometricflag == 0.)
     goodindex = np.intersect1d(goodvegamagindex,goodphotoindex)
-    #print(goodindex)
+    print(len(goodindex))
     if timeformat == 'datetime64':
         timelist2 = timelist.datetime64[goodindex]
     elif timeformat == 'mjd':
